@@ -2,13 +2,10 @@ web:
   build: .
   autorestart: always
   ports:
-   - "3000:3000"
+    - "3000:3000"
   links:
    - mongo
 mongo:
   image: mongo
   ports:
-   - "27017:27017"
-  environment:
-   - MONGO_PORT_27017_TCP_ADDR
-   - MONGO_PORT_27017_TCP_PORT
+    - "27017:27017"
