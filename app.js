@@ -11,7 +11,7 @@ var users = require('./routes/api/users');
 
 var app = express();
 
-var connectionString = 'mongodb://127.0.0.1:27017/demoDB';
+var connectionString = 'mongodb://localhost:27017/demoDB';
 mongoose.connect(connectionString);
 
 // view engine setup
