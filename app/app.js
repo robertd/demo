@@ -13,7 +13,7 @@ var app = express();
 
 var mongoDbAddress = process.env.MONGO_PORT_27015_TCP_ADDR + process.env.MONGO_PORT_27015_TCP_PORT || 'localhost:27017';
 var connectionString = 'mongodb://' + mongoDbAddress + '/demoDB';
-console.log(connectionString);
+console.log("MongoDb server running on: " + connectionString);
 mongoose.connect(connectionString);
 
 // view engine setup
