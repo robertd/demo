@@ -5,4 +5,7 @@ MAINTAINER robert.djurasaj@gmail.com
 COPY app /opt/app
 WORKDIR /opt/app
 RUN ["npm","install"]
-RUN ["npm","start"]
+
+EXPOSE 3000
+
+CMD ["npm","start"]
