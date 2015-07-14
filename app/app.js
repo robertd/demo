@@ -11,8 +11,8 @@ var users = require('./routes/api/users');
 
 var app = express();
 
-var mongoDB = process.env.MONGO_PORT || 'mongodb://localhost:27017';
-var connectionString = mongoDB + '/demoDB';
+var mongoDbAddress = process.env.MONGO_PORT_27015_TCP_ADDR + process.env.MONGO_PORT_27015_TCP_PORT || 'localhost:27017';
+var connectionString = 'mongodb://' + mongoDbAddress + '/demoDB';
 console.log(connectionString);
 mongoose.connect(connectionString);
 
