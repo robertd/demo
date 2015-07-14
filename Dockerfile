@@ -4,4 +4,5 @@ MAINTAINER robert.djurasaj@gmail.com
 
 COPY app /opt/app
 WORKDIR /opt/app
+RUN ["npm","install"]
 RUN ["npm","start"]
