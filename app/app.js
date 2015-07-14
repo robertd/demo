@@ -11,9 +11,10 @@ var users = require('./routes/api/users');
 
 var app = express();
 
-var mongoDbAddress = process.env.MONGO_PORT_27015_TCP_ADDR + process.env.MONGO_PORT_27015_TCP_PORT || 'localhost:27017';
+var mongoDbAddress = process.env.MONGO_PORT_27017_TCP_ADDR + process.env.MONGO_PORT_27017_TCP_PORT || 'localhost:27017';
 var connectionString = 'mongodb://' + mongoDbAddress + '/demoDB';
 console.log("MongoDb server running on: " + connectionString);
+console.log(process.env);
 mongoose.connect(connectionString);
 
 // view engine setup
