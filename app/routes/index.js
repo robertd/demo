@@ -6,7 +6,7 @@ var request = require('request');
 
 /* GET users page. */
 router.get('/', function(req, res, next) {
-    request('http://localhost:3000/api/users', function (error, response, body) {
+    request('/api/users', function (error, response, body) {
       	if (!error && response.statusCode == 200) {
         	res.render('users', { users: body });
       	}
